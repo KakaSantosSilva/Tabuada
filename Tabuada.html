@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<style>
+    body {
+        font: verdana normal 20px;
+
+    }
+
+    #container {
+        background-color: aquamarine;
+        width: 500px;
+        margin: 0 auto;
+        border-radius: 20px;
+
+    }
+    #caixa label{
+        /*background-color: tomato;*/
+        margin-left: 50px;
+
+    }
+
+    h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+
+    }
+
+    #resposta {
+        background-color: aqua;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 10px;
+        text-align: justify;
+        font: Verdana normal 20px;
+        padding-left: 130px;
+        padding-top: 10px;
+        border-radius: 20px;
+
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h1>Tabuada</h1>
+
+        <div id="caixa">
+            <label for="">Tabuada do número: </label><input type="number" name="number" id="number">
+            <input onclick="tabuada()" type="button" value="exibir">
+            <div id="resposta"></div>
+        </div>
+
+
+    </div>
+    <script>
+
+        function tabuada() {
+            var n1 = parseInt(document.getElementById('number').value)
+            var resposta = document.getElementById('resposta')
+            var tabuada = "";
+
+            for (var count = 1; count <= 10; count++)
+                tabuada += n1 + " x " + count + " = " + (n1 * count) + "<br>"
+
+
+            resposta.innerHTML = tabuada
+
+
+
+
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
